@@ -1,5 +1,9 @@
-# CST AI Lab
+# Lumo: free AI tools
 
-School AI project by **Abdulloh Kariev**: text-to-image, text-to-speech, speech-to-text and the Canadian School of Tashkent website.
+A school project by **Abdulloh Kariev** (Canadian School of Tashkent, Applied AI lesson).
 
-Live demos need the Python server (`source/server.py`) and a Pollinations API key in a `.env` file (`POLLINATIONS_API_KEY=...`). The key is never committed.
+- **Text to Image**: AI Horde (community network of volunteer computers). No account or key. Can be slow.
+- **Text to Speech**: Kokoro model running in the browser.
+- **Speech to Text**: Whisper model running in the browser.
+
+Everything is static, so it runs on GitHub Pages. `source/` holds the original command-line Python scripts used before the web version (they need a Pollinations key in a local `.env`, which is never committed).
