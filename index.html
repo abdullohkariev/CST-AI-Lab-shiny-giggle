@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CST AI Lab – Abdulloh Kariev</title>
+<meta name="description" content="School AI projects by Abdulloh Kariev: text-to-image, text-to-speech, speech-to-text and the Canadian School of Tashkent website built with AI.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="#top" class="logo"><i></i>CST AI Lab</a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#demo">Try it</a></li><li><a href="#how">How it works</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About</a></li></ul>
+  <a href="#demo" class="btn primary">Try it live</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="pill">✨ Applied AI project · Canadian School of Tashkent</span>
+  <h1>Turn words into <span class="grad">images, voices &amp; websites</span></h1>
+  <p>Two school AI projects in one place. Type a prompt and watch it become a picture, hear text spoken aloud, or explore a full school website built with AI.</p>
+  <div class="row"><a href="#demo" class="btn primary">Try the demos</a><a href="#how" class="btn">See how it works</a></div>
+  <p class="by">Created by <b>Abdulloh Kariev</b></p>
+</div></header>
+
+<section id="projects"><div class="wrap">
+  <h2>Two projects, one site</h2>
+  <p class="sub">Each project is a working tool you can test below.</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🎨</div><h3>Text to Image</h3><p>Describe a scene in words and an AI model (Flux) paints it in seconds.</p></div>
+    <div class="card"><div class="ic">🔊</div><h3>Text to Speech</h3><p>Paste any text and pick a voice. The AI reads it out loud as an MP3.</p></div>
+    <div class="card"><div class="ic">📝</div><h3>Speech to Text</h3><p>Upload a recording and Whisper transcribes what was said.</p></div>
+    <div class="card"><div class="ic">🏫</div><h3>School Website</h3><p>A full 8-page website for Canadian School of Tashkent with search and a chatbot, built with Claude.</p></div>
+  </div>
+</div></section>
+
+<section id="demo"><div class="wrap">
+  <h2>Try it yourself</h2>
+  <p class="sub">Pick a project and use it right here.</p>
+  <div class="tabs">
+    <button class="tab on" data-t="img">🎨 Image Studio</button>
+    <button class="tab" data-t="tts">🔊 Voice Lab</button>
+    <button class="tab" data-t="stt">📝 Transcribe</button>
+    <button class="tab" data-t="web">🏫 School Website</button>
+  </div>
+
+  <div class="panel on" id="p-img">
+    <h3>Image Studio</h3><p class="lead">Describe what you want to see.</p>
+    <div class="demo"><div>
+      <label for="ip">Prompt</label>
+      <textarea id="ip" maxlength="300">a cozy cabin in a snowy forest at dusk</textarea>
+      <div class="chips" data-for="ip"><span class="chip">a dragon flying over a city at sunset</span><span class="chip">a futuristic school in Tashkent</span><span class="chip">a red fox in autumn leaves</span></div>
+      <p style="margin-top:16px"><button class="btn primary" id="ib">Generate image</button></p>
+    </div><div class="out" id="io">Your image will appear here</div></div>
+  </div>
+
+  <div class="panel" id="p-tts">
+    <h3>Voice Lab</h3><p class="lead">Type text, choose a voice, and listen.</p>
+    <div class="demo"><div>
+      <label for="tp">Text</label>
+      <textarea id="tp" maxlength="300">Canadian School of Tashkent is the best school.</textarea>
+      <label for="tv">Voice</label>
+      <select id="tv"><option>alloy</option><option>nova</option><option>echo</option><option>fable</option><option>onyx</option><option>shimmer</option></select>
+      <p style="margin-top:16px"><button class="btn primary" id="tb">Speak</button></p>
+    </div><div class="out" id="to">Audio will appear here</div></div>
+    <h3 style="margin-top:26px;font-size:17px">Samples made with this tool</h3>
+    <div class="samples" id="samples"></div>
+  </div>
+
+  <div class="panel" id="p-stt">
+    <h3>Transcribe</h3><p class="lead">Upload an audio file (mp3, wav, m4a, max 10 MB) and get the text.</p>
+    <div class="demo"><div>
+      <label for="sf">Audio file</label><input type="file" id="sf" accept="audio/*">
+      <p style="margin-top:16px"><button class="btn primary" id="sb">Transcribe</button></p>
+      <p class="sub" style="margin-top:14px;font-size:14px">Tip: download a sample from the Voice Lab tab and upload it here to close the loop.</p>
+    </div><div class="out" id="so">The transcript will appear here</div></div>
+  </div>
+
+  <div class="panel" id="p-web">
+    <h3>Canadian School of Tashkent website</h3>
+    <p class="lead">A real multi-page site. Click around, use the search, and chat with the CST Assistant (bottom-right).</p>
+    <div class="frame"><iframe src="school/index.html" title="CST school website" loading="lazy"></iframe></div>
+    <p style="margin-top:14px"><a class="btn" href="school/index.html" target="_blank" rel="noopener">Open full site ↗</a></p>
+  </div>
+
+  <div class="note" id="offline" hidden>Live generation needs the project's server, which keeps the API key private. Run <b>python server.py</b> and open <b>http://localhost:8000</b>. The gallery, samples and school website work without it.</div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2><p class="sub">The same simple idea powers every tool.</p>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><h3>You write a prompt</h3><p>A sentence like “a dragon flying over a city at sunset”, or the text you want spoken.</p></div>
+    <div class="step"><span class="n">2</span><h3>A small Python server sends it to the AI</h3><p>The request goes to the Pollinations API with a secret key. The key stays on the server, so visitors never see it.</p><pre>GET https://gen.pollinations.ai/image/{prompt}?model=flux&amp;width=1024&amp;height=1024</pre></div>
+    <div class="step"><span class="n">3</span><h3>The model creates the result</h3><p>Flux draws the picture, a text-to-speech model creates an MP3, and Whisper turns speech back into text.</p></div>
+    <div class="step"><span class="n">4</span><h3>You see or hear it</h3><p>The finished file is sent back and shown on this page. The command-line scripts also save every result to an output folder.</p></div>
+    <div class="step"><span class="n">5</span><h3>The school website works differently</h3><p>It is plain HTML, CSS and JavaScript written with Claude. Its chatbot is rule-based: it matches keywords to answers from the site's own content, so it needs no AI service and sends no data anywhere.</p></div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <h2>Gallery</h2><p class="sub">Real images generated by this project. Click one to enlarge.</p>
+  <div class="gallery" id="gal"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2>About the creator</h2>
+  <div class="card author"><div class="avatar">AK</div>
+    <div><h3 style="font-size:22px">Abdulloh Kariev</h3>
+    <p>Student at Canadian School of Tashkent. Built these projects in the Applied AI lesson, using Python, the Pollinations API and Claude.</p></div></div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Abdulloh Kariev · Canadian School of Tashkent · Student AI project, not an official school release.</div></footer>
+<div class="lb" id="lb"><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>
