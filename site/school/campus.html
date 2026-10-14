@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Science labs, library, innovation lab, media studios, athletics and dining at Canadian School of Tashkent.">
+  <title>Campus | Canadian School of Tashkent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="topbar">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Canadian School of Tashkent, home"><img class="logo-mark" src="images/mark-color.png" alt="" width="35" height="56"><span class="logo-text">Canadian School<br>of Tashkent</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+      <nav id="mainNav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <a href="about.html">About <span aria-hidden="true">▾</span></a>
+          <div class="submenu">
+            <a href="about.html#mission">Mission &amp; Vision</a>
+            <a href="about.html#values">Core Values</a>
+            <a href="about.html#licenses">Licenses</a>
+            <a href="about.html#leadership">Leadership</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="academics.html">Academics <span aria-hidden="true">▾</span></a>
+          <div class="submenu">
+            <a href="academics.html#journey">The Journey, Ages 5–18</a>
+            <a href="academics.html#program">How It Is Built</a>
+            <a href="academics.html#future-ready">Future-Ready Studies</a>
+            <a href="academics.html#nova-scotia">Nova Scotia Pathway</a>
+          </div>
+        </div>
+        <a href="campus.html" class="active" aria-current="page">Campus</a>
+        <a href="student-life.html">Student Life</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>Campus</span></div>
+      <span class="eyebrow">Our Campus</span>
+      <h1>Spaces built for how students learn</h1>
+      <p>Everything for the whole school sits on one campus in Tashkent’s Mirabad District.</p>
+    </div>
+  </div>
+
+  <div class="search-section" id="search">
+    <div class="container">
+      <div class="search-box">
+        <h2>Search</h2>
+        <form class="search-form" id="searchForm" role="search">
+          <input type="search" id="searchInput" placeholder="Search the page (e.g. robotics, Nova Scotia, library)..." aria-label="Search the page" autocomplete="off">
+          <button type="button" class="clear" id="searchClear" aria-label="Clear search" hidden>✕</button>
+          <button type="submit" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></button>
+        </form>
+        <p class="search-status" id="searchStatus" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+  <section id="campus">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Campus</span>
+        <h2>Spaces Built for How Students Learn</h2>
+        <p>Everything for the whole school sits on one campus in Tashkent’s Mirabad District.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile t1"><span class="big" aria-hidden="true">🧪</span><span class="tag">Science</span><h3>Three Science Labs</h3><p>Dedicated biology, chemistry and physics laboratories where science is done with your hands.</p><span class="more" aria-hidden="true">→</span></div>
+        <div class="tile t3"><span class="big" aria-hidden="true">📚</span><span class="tag">Reading</span><h3>Library for Every Age</h3><p>Print and digital collections, reading nooks and research support, from picture books to senior projects.</p><span class="more" aria-hidden="true">→</span></div>
+        <div class="tile t4"><span class="big" aria-hidden="true">🤖</span><span class="tag">Technology</span><h3>Innovation &amp; Robotics Lab</h3><p>3D printers, electronics and build kits, and home to the school’s FLL and FTC robotics teams.</p><span class="more" aria-hidden="true">→</span></div>
+        <div class="tile t2"><span class="big" aria-hidden="true">🎙️</span><span class="tag">Media</span><h3>Creative &amp; Media Spaces</h3><p>A content studio, a podcast studio and a virtual-reality lab for making and broadcasting.</p><span class="more" aria-hidden="true">→</span></div>
+        <div class="tile t5"><span class="big" aria-hidden="true">🏊</span><span class="tag">Sport</span><h3>Friday at the Gymnasium</h3><p>Every Friday all students train at a partner gym: football, tennis, swimming, badminton and basketball.</p><span class="more" aria-hidden="true">→</span></div>
+        <div class="tile t6"><span class="big" aria-hidden="true">🍎</span><span class="tag">Wellbeing</span><h3>Dining Hall</h3><p>Breakfast, lunch and snacks cooked in the school’s own kitchen, with a vegetarian main every day.</p><span class="more" aria-hidden="true">→</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="dining" class="bg-cream">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Dining &amp; Cafeteria</span>
+        <h2>Fresh Food, Made on Campus</h2>
+        <p>Three on-campus meals a day, cooked in the school’s own kitchen and shared in one hall.</p>
+      </div>
+      <div class="grid">
+        <div class="card c4"><div class="icon" aria-hidden="true">🍳</div><h3>Breakfast · 8:00</h3><p>Eggs, porridge or a hot grain with fruit, yogurt, bread and tea or milk, served before the first lesson.</p></div>
+        <div class="card c6"><div class="icon" aria-hidden="true">🍲</div><h3>Lunch · 12:30</h3><p>A complete hot meal with protein, a grain, two vegetables and a salad station. A vegetarian main is offered daily.</p></div>
+        <div class="card c3"><div class="icon" aria-hidden="true">🍎</div><h3>Snacks</h3><p>Fruit, a baked item or a savoury portion to bridge energy gaps, with a lighter version for students staying for clubs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Come and see CST for yourself</h2>
+          <p>A campus visit answers more questions in twenty minutes than a hundred emails.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Book a Campus Tour</a>
+          <a href="admissions.html" class="btn btn-ghost">Apply for 2026–2027</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html" class="logo" aria-label="Canadian School of Tashkent, home"><img src="images/logo-white.png" alt="Canadian School of Tashkent" width="86" height="77"></a>
+          <p class="motto">In the spirit of excellence and collaboration, fostering curiosity and character.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="campus.html">Campus</a>
+          <a href="student-life.html">Student Life</a>
+        </div>
+        <div>
+          <h4>Join Us</h4>
+          <a href="admissions.html">Admissions</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Book a Tour</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>4 Ferghana Yuli, Mirabad District, Tashkent</p>
+          <p><a href="tel:+998777778585">+998 77 777 85 85</a></p>
+          <p><a href="mailto:admissions@canadianschool.uz">admissions@canadianschool.uz</a></p>
+        </div>
+      </div>
+      <p class="foot-note">A student website project. Information based on canadianschool.uz.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lumo – Free AI Tools</title>
+<meta name="description" content="Lumo: free AI tools to turn text into images, text into speech, and speech into text. A school project by Abdulloh Kariev.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a href="#home" class="brand"><span class="mark"></span>Lumo</a>
+  <nav>
+    <a href="#image" data-nav="image">Text to Image</a>
+    <a href="#speech" data-nav="speech">Text to Speech</a>
+    <a href="#transcribe" data-nav="transcribe">Speech to Text</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<section class="view" id="v-home">
+  <div class="wrap hero">
+    <p class="kicker">Free AI tools · no account needed</p>
+    <h1>Make pictures, voices and text with AI.</h1>
+    <p class="lead">Three simple tools. Type an idea or drop in a recording, get a result in seconds, and download it.</p>
+  </div>
+  <div class="wrap tools">
+    <a class="tool t-blue" href="#image"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span><h2>Text to Image</h2><p>Describe a scene and get a picture.</p><span class="go">Open tool →</span></a>
+    <a class="tool t-peach" href="#speech"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11"/></svg></span><h2>Text to Speech</h2><p>Turn English text into natural speech.</p><span class="go">Open tool →</span></a>
+    <a class="tool t-mint" href="#transcribe"><span class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></span><h2>Speech to Text</h2><p>Upload or record audio and read what was said.</p><span class="go">Open tool →</span></a>
+  </div>
+  <div class="wrap about">
+    <div>
+      <h3>How it works</h3>
+      <p>You write a prompt or add audio. The tool sends it to an AI model, and the result appears on the page, ready to download. Everything is free and needs no account. Images are drawn by volunteer computers on the AI Horde network, so they can take a little while. Text to Speech and Speech to Text run inside your browser, so your text and recordings never leave your device.</p>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Lumo is a school project from the Applied AI lesson at Canadian School of Tashkent, created by <b>Abdulloh Kariev</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEXT TO IMAGE -->
+<section class="view" id="v-image">
+  <div class="wrap">
+    <a class="back" href="#home">← All tools</a>
+    <div class="titlebar t-blue"><h1>Text to Image</h1><p>Describe what you want to see. Be specific about style, light and mood. Images are drawn by volunteer computers, so it can take from 10 seconds to a few minutes.</p></div>
+    <div class="work t-blue">
+      <div class="card">
+        <label for="ip">Your prompt</label>
+        <textarea id="ip" maxlength="400" placeholder="A cozy cabin in a snowy forest at dusk, warm light in the windows"></textarea>
+        <div class="chips" data-for="ip">
+          <button type="button" class="chip">a watercolor painting of a sailboat at sunrise</button>
+          <button type="button" class="chip">a friendly robot reading a book, flat illustration</button>
+          <button type="button" class="chip">a mountain village in spring, soft light</button>
+        </div>
+        <label>Shape</label>
+        <div class="seg" id="isize">
+          <button type="button" class="on" data-w="512" data-h="512">Square</button>
+          <button type="button" data-w="640" data-h="384">Wide</button>
+          <button type="button" data-w="384" data-h="640">Tall</button>
+        </div>
+        <button class="btn" id="ib">Generate image</button>
+      </div>
+      <div class="card result">
+        <div class="out" id="io"><p class="hint">Your image will appear here.</p></div>
+        <div class="actions" id="ia" hidden><a class="btn ghost" id="idl" download="lumo-image.webp">Download image</a></div>
+      </div>
+    </div>
+    <div class="recent t-blue" id="irecent" hidden><h3>This session</h3><div class="thumbs" id="ithumbs"></div></div>
+  </div>
+</section>
+
+<!-- TEXT TO SPEECH -->
+<section class="view" id="v-speech">
+  <div class="wrap">
+    <a class="back" href="#home">← All tools</a>
+    <div class="titlebar t-peach"><h1>Text to Speech</h1><p>Type English text, choose a voice, and listen. Download the audio when it is ready. The first time it downloads a voice model (about 90 MB).</p></div>
+    <div class="work t-peach">
+      <div class="card">
+        <label for="tp">Your text</label>
+        <textarea id="tp" maxlength="500" placeholder="Hello! Welcome to Lumo, a school AI project."></textarea>
+        <p class="count"><span id="tcount">0</span> / 500</p>
+        <label for="tv">Voice</label>
+        <select id="tv"><option value="af_heart">Heart (female, US)</option><option value="af_bella">Bella (female, US)</option><option value="af_nicole">Nicole (female, US)</option><option value="am_michael">Michael (male, US)</option><option value="am_adam">Adam (male, US)</option><option value="bf_emma">Emma (female, UK)</option><option value="bm_george">George (male, UK)</option></select>
+        <button class="btn" id="tb">Create audio</button>
+      </div>
+      <div class="card result">
+        <div class="out" id="to"><p class="hint">Your audio will appear here.</p></div>
+        <div class="actions" id="ta" hidden><a class="btn ghost" id="tdl" download="lumo-speech.wav">Download audio</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEECH TO TEXT -->
+<section class="view" id="v-transcribe">
+  <div class="wrap">
+    <a class="back" href="#home">← All tools</a>
+    <div class="titlebar t-mint"><h1>Speech to Text</h1><p>Upload an audio file or record your voice. The AI runs in your browser, so nothing is uploaded.</p></div>
+    <div class="work t-mint">
+      <div class="card">
+        <label for="sf">Audio file</label>
+        <input type="file" id="sf" accept="audio/*,video/*">
+        <p class="or">or</p>
+        <button class="btn ghost" id="rec" type="button">Record with microphone</button>
+        <audio id="sp" controls hidden></audio>
+        <label for="sl">Language</label>
+        <select id="sl"><option value="">Auto-detect</option><option value="english">English</option><option value="russian">Russian</option><option value="uzbek">Uzbek</option></select>
+        <button class="btn" id="sb">Transcribe</button>
+        <p class="small">The first run downloads a small speech model (about 40 MB). After that it is fast.</p>
+      </div>
+      <div class="card result">
+        <div class="out" id="so"><p class="hint">Your transcript will appear here.</p></div>
+        <div class="actions" id="sa" hidden><button class="btn ghost" id="scopy" type="button">Copy text</button><a class="btn ghost" id="sdl" download="lumo-transcript.txt">Download .txt</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Lumo · created by <b>Abdulloh Kariev</b> · Canadian School of Tashkent</span><a href="school/index.html">Also: CST school website</a></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
