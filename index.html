@@ -5,42 +5,53 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CST AI Lab – Abdulloh Kariev</title>
 <meta name="description" content="School AI projects by Abdulloh Kariev: text-to-image, text-to-speech, speech-to-text and the Canadian School of Tashkent website built with AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav><div class="wrap">
-  <a href="#top" class="logo"><i></i>CST AI Lab</a>
+  <a href="#top" class="logo">CST <span>AI Lab</span></a>
   <ul><li><a href="#projects">Projects</a></li><li><a href="#demo">Try it</a></li><li><a href="#how">How it works</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About</a></li></ul>
   <a href="#demo" class="btn primary">Try it live</a>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <span class="pill">✨ Applied AI project · Canadian School of Tashkent</span>
-  <h1>Turn words into <span class="grad">images, voices &amp; websites</span></h1>
-  <p>Two school AI projects in one place. Type a prompt and watch it become a picture, hear text spoken aloud, or explore a full school website built with AI.</p>
-  <div class="row"><a href="#demo" class="btn primary">Try the demos</a><a href="#how" class="btn">See how it works</a></div>
-  <p class="by">Created by <b>Abdulloh Kariev</b></p>
+  <div>
+    <p class="eyebrow">Applied AI project &middot; Canadian School of Tashkent</p>
+    <h1>Words in. <em>Pictures, voices</em> and a website out.</h1>
+    <p class="lead">Two school projects in one place. Describe a scene and watch it get painted, hear any text read aloud, or walk through a full school website built with AI.</p>
+    <div class="row"><a href="#demo" class="btn primary">Try the demos</a><a href="#how" class="btn">How it works</a></div>
+    <p class="by">Created by <b>Abdulloh Kariev</b></p>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <img src="assets/images/1791345557-a-cozy-cabin-in-a-snowy-forest-at-dusk.png" alt="">
+    <img src="assets/images/1791345655-a-dragon-flying-over-a-city-at-sunset.png" alt="">
+    <img src="assets/images/1791346271-canadian-school-of-tashkent.png" alt="">
+    <img src="assets/images/1791345712-car-bmw-x7-in-green-color.png" alt="">
+  </div>
 </div></header>
 
 <section id="projects"><div class="wrap">
-  <h2>Two projects, one site</h2>
-  <p class="sub">Each project is a working tool you can test below.</p>
+  <div class="head"><h2>Two projects, one site</h2>
+  <p class="sub">Each one is a working tool you can test below.</p></div>
   <div class="cards">
-    <div class="card"><div class="ic">🎨</div><h3>Text to Image</h3><p>Describe a scene in words and an AI model (Flux) paints it in seconds.</p></div>
-    <div class="card"><div class="ic">🔊</div><h3>Text to Speech</h3><p>Paste any text and pick a voice. The AI reads it out loud as an MP3.</p></div>
-    <div class="card"><div class="ic">📝</div><h3>Speech to Text</h3><p>Upload a recording and Whisper transcribes what was said.</p></div>
-    <div class="card"><div class="ic">🏫</div><h3>School Website</h3><p>A full 8-page website for Canadian School of Tashkent with search and a chatbot, built with Claude.</p></div>
+    <div class="card"><div class="num">01</div><h3>Text to Image</h3><p>Describe a scene in words and an AI model (Flux) paints it in seconds.</p></div>
+    <div class="card"><div class="num">02</div><h3>Text to Speech</h3><p>Paste any text and pick a voice. The AI reads it out loud as an MP3.</p></div>
+    <div class="card"><div class="num">03</div><h3>Speech to Text</h3><p>Upload a recording and Whisper transcribes what was said.</p></div>
+    <div class="card"><div class="num">04</div><h3>School Website</h3><p>A full 8-page website for Canadian School of Tashkent with search and a chatbot, built with Claude.</p></div>
   </div>
 </div></section>
 
-<section id="demo"><div class="wrap">
-  <h2>Try it yourself</h2>
-  <p class="sub">Pick a project and use it right here.</p>
+<section id="demo" class="alt"><div class="wrap">
+  <div class="head"><h2>Try it yourself</h2>
+  <p class="sub">Pick a project and use it right here.</p></div>
   <div class="tabs">
-    <button class="tab on" data-t="img">🎨 Image Studio</button>
-    <button class="tab" data-t="tts">🔊 Voice Lab</button>
-    <button class="tab" data-t="stt">📝 Transcribe</button>
-    <button class="tab" data-t="web">🏫 School Website</button>
+    <button class="tab on" data-t="img">Image Studio</button>
+    <button class="tab" data-t="tts">Voice Lab</button>
+    <button class="tab" data-t="stt">Transcribe</button>
+    <button class="tab" data-t="web">School Website</button>
   </div>
 
   <div class="panel on" id="p-img">
@@ -86,24 +97,24 @@
 </div></section>
 
 <section id="how"><div class="wrap">
-  <h2>How it works</h2><p class="sub">The same simple idea powers every tool.</p>
+  <div class="head"><h2>How it works</h2><p class="sub">The same simple idea powers every tool.</p></div>
   <div class="steps">
-    <div class="step"><span class="n">1</span><h3>You write a prompt</h3><p>A sentence like “a dragon flying over a city at sunset”, or the text you want spoken.</p></div>
-    <div class="step"><span class="n">2</span><h3>A small Python server sends it to the AI</h3><p>The request goes to the Pollinations API with a secret key. The key stays on the server, so visitors never see it.</p><pre>GET https://gen.pollinations.ai/image/{prompt}?model=flux&amp;width=1024&amp;height=1024</pre></div>
-    <div class="step"><span class="n">3</span><h3>The model creates the result</h3><p>Flux draws the picture, a text-to-speech model creates an MP3, and Whisper turns speech back into text.</p></div>
-    <div class="step"><span class="n">4</span><h3>You see or hear it</h3><p>The finished file is sent back and shown on this page. The command-line scripts also save every result to an output folder.</p></div>
-    <div class="step"><span class="n">5</span><h3>The school website works differently</h3><p>It is plain HTML, CSS and JavaScript written with Claude. Its chatbot is rule-based: it matches keywords to answers from the site's own content, so it needs no AI service and sends no data anywhere.</p></div>
+    <div class="step"><span class="n">1</span><div><h3>You write a prompt</h3><p>A sentence like “a dragon flying over a city at sunset”, or the text you want spoken.</p></div></div>
+    <div class="step"><span class="n">2</span><div><h3>A small Python server sends it to the AI</h3><p>The request goes to the Pollinations API with a secret key. The key stays on the server, so visitors never see it.</p><pre>GET https://gen.pollinations.ai/image/{prompt}?model=flux&amp;width=1024&amp;height=1024</pre></div></div>
+    <div class="step"><span class="n">3</span><div><h3>The model creates the result</h3><p>Flux draws the picture, a text-to-speech model creates an MP3, and Whisper turns speech back into text.</p></div></div>
+    <div class="step"><span class="n">4</span><div><h3>You see or hear it</h3><p>The finished file is sent back and shown on this page. The command-line scripts also save every result to an output folder.</p></div></div>
+    <div class="step"><span class="n">5</span><div><h3>The school website works differently</h3><p>It is plain HTML, CSS and JavaScript written with Claude. Its chatbot is rule-based: it matches keywords to answers from the site's own content, so it needs no AI service and sends no data anywhere.</p></div></div>
   </div>
 </div></section>
 
 <section id="gallery"><div class="wrap">
-  <h2>Gallery</h2><p class="sub">Real images generated by this project. Click one to enlarge.</p>
+  <div class="head"><h2>Gallery</h2><p class="sub">Real images generated by this project. Click one to enlarge.</p></div>
   <div class="gallery" id="gal"></div>
 </div></section>
 
 <section id="about"><div class="wrap">
-  <h2>About the creator</h2>
-  <div class="card author"><div class="avatar">AK</div>
+  <div class="head"><h2>About the creator</h2></div>
+  <div class="author"><div class="avatar">AK</div>
     <div><h3 style="font-size:22px">Abdulloh Kariev</h3>
     <p>Student at Canadian School of Tashkent. Built these projects in the Applied AI lesson, using Python, the Pollinations API and Claude.</p></div></div>
 </div></section>
